@@ -57,7 +57,7 @@ gem 'kaminari'
 
 gem 'dotenv-rails', require: 'dotenv/rails-now'
 gem 'pg'
-gem 'bootstrap', '~> 4.5.0'
+gem 'bootstrap', '~> 4.0.0'
 gem 'mini_racer'
 gem 'haml-rails'
 gem 'jquery-turbolinks'

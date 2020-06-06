@@ -1,0 +1,5 @@
+%li.nav-item= link_to 'Login', new_employee_session_path, class: 'nav-link'
+
+- if employee_signed_in?
+  %li.nav-item= link_to 'Logut', destroy_employee_session_path, class: 'nav-link'
+

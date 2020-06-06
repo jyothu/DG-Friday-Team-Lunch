@@ -1,0 +1,2 @@
+class TeamLunchGroup < ApplicationRecord
+end
