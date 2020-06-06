@@ -1,0 +1,23 @@
+global: &global
+  adapter: postgresql
+  encoding: utf8
+  database: <%= ENV['RDS_DB_NAME'] %>
+  username: <%= ENV['RDS_USERNAME'] %>
+  password: <%= ENV['RDS_PASSWORD'] %>
+  host: <%= ENV['RDS_HOSTNAME'] %>
+  port: <%= ENV['RDS_PORT'] %>
+  pool: 5
+
+development:
+  <<: *global
+  database: <%= ENV['RDS_DB_NAME'] %>_development
+  pool: 10
+
+test:
+  <<: *global
+  database: <%= ENV['RDS_DB_NAME'] %>_test
+
+
+production:
+  <<: *global
+  pool: 25
